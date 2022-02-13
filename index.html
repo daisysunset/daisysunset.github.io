@@ -1,291 +1,158 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-02-13 14:57:47'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
   
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-<meta name="generator" content="Hexo 6.0.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-first-blog" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/02/13/first-blog/" class="article-date">
-  <time class="dt-published" datetime="2022-02-13T03:49:20.000Z" itemprop="datePublished">2022-02-13</time>
-</a>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/02/13/first-blog/">first-blog</a>
-    </h1>
-  
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.0.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">1</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/02/13/first-blog/" title="first-blog">first-blog</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-02-13T03:49:20.000Z" title="Created 2022-02-13 11:49:20">2022-02-13</time></span></div><div class="content">浪漫主义时代的欧洲音乐课程详细信息    
+课程号                 04330421                 
+学分                 2                                           
+英文名称                 The  European  Music  in  Romantic  Period                                           
+先修课程                 无                                           
+中文简介                 《浪漫主义时代的欧洲音乐》是一门专门介绍19世纪欧洲音乐文化的断代史课程，主要针对浪漫主义音乐的产生和发展过程进行分析讲解，使学生通过对音乐的聆听和分析，以及对经典音乐理论著作的章节阅读，较为全面地理解和掌握19世纪的欧洲音乐文化，激发学生对艺术审美和文化研讨的兴趣。本课程就有关浪漫主义音乐的15个专题展开课堂教学，通过对作曲家及其代表性作品的深 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/02/13/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-02-13T03:29:27.212Z" title="Created 2022-02-13 11:29:27">2022-02-13</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>浪漫主义时代的欧洲音乐课程详细信息    </p>
-<p>课程号                 04330421                 </p>
-<p>学分                 2                                           </p>
-<p>英文名称                 The  European  Music  in  Romantic  Period                                           </p>
-<p>先修课程                 无                                           </p>
-<p>中文简介                 《浪漫主义时代的欧洲音乐》是一门专门介绍19世纪欧洲音乐文化的断代史课程，主要针对浪漫主义音乐的产生和发展过程进行分析讲解，使学生通过对音乐的聆听和分析，以及对经典音乐理论著作的章节阅读，较为全面地理解和掌握19世纪的欧洲音乐文化，激发学生对艺术审美和文化研讨的兴趣。本课程就有关浪漫主义音乐的15个专题展开课堂教学，通过对作曲家及其代表性作品的深度讲解和剖析，逐步廓清浪漫主义音乐风格的历史沿革、审美特征、文化语境和艺术影响。本课程的教学亮点在于：第一，注重对浪漫主义音乐的时代背景和文化语境加以介绍和分析，系统阅读经典音乐史著作和研究论文；第二，采用大量视听音乐素材和前沿性的文化史料作为授课支撑；第三，启发学生对欧洲浪漫主义文学、绘画，以及其他艺术现象的关注和思考，从开阔的文化视野中把握19世纪欧洲音乐的形式、风格和思想。第四，注重中西音乐文化比较，特别对浪漫主义音乐对中国近现代音乐的影响进行专门研讨；第五，充分利用互联网在音乐文化信息检索方面的便利条件，鼓励并组织学生查找前沿信息，开辟专题论坛。本课程力求深入浅出的介绍各种音乐文化现象，不在技术理论问题上给学生的聆听和理解带来障碍。本课欢迎我校对西方文化怀有兴趣的同学前来聆听，使师生在课堂内外的互动交流中取得思想争鸣、教学相长的良好效果。                                           </p>
-<p>英文简介                  The European Music in Romantic Period is an  optional course for the undergraduates in Peking University. It  basically talks about the Romantic music culture and the art music  history in the 19th and early 20th century in Europe. Comparing with  other courses on music history, This series of lectures focus on various music phenomena and their context. The aim of this course is to help  the students to broaden the view of music listening and to be acquainted with the repertory of the romatic music. The course will briefly  introduce the life of various composers in each decade. Some  representative music pieces will also be presented and analysed in each  class. Furthermore, the course will guide the students to read the  classic references and papers on the western music history in the  romantic period, and to discuss various topics about the music affairs  and their culture contexts.                                            </p>
-<p>开课院系                 艺术学院                                           通选课领域                 e                                           是否属于艺术与美育                 是                                           平台课性质                                                                平台课类型                                                                授课语言                 中文                                           教材                 A History of Western Music (seventh  edition),Claude V.Palisca, J. Peter Burkholder, Donald Jay  Grout,W.W.Norton &amp; Company,2010,A Brief History of Music in Western  Culture,Mark Evan Bonds,Prentice Hall PTR,2004,Music in The Nineteenth  Century,Walter Frisch,W.W.Norton and Company,2013,978-0-393-92919；  Nineteenth-Century Music,Carl Dahlhaus,University of California  Press,1989,Romantic Music：A History of Musical Style in  Nineteenth-Century Europe,Leon Plantinga,W.W.Norton &amp;  Company,1984,19世纪音乐史,格奥尔格·克内普勒,人民音乐出版社,2002,The Cambridge History of  Nineteenth-Century Music,Jim Samson,Cambridge University  Press,2001,西方音乐通史,于润洋 主编,上海音乐出版社,2001,The Romantic Generation,Charles  Rosen,Harvard University Press,1995,                                           参考书                 9780393931259；  978-0-131-838604；  9780520076440；  9780393951967；  7103018537；  9780521590174；  9787805539508；  9780674779341；                                             教学大纲                 《浪漫主义时代的欧洲音乐》是一门专门介绍19世纪欧洲音乐文化的断代史课程，主要针对浪漫主义音乐的产生和发展过程进行分析讲解，使学生通过对音乐的聆听和分析，对经典音乐理论文献和研究论文的阅读，较为全面地理解和掌握19世纪的欧洲音乐文化，引导学生参与音乐审美和文化研讨，深入探索西方音乐在近代历史发展中的来龙去脉。  </p>
-<p>第一讲：导论      什么是浪漫主义？      18世纪中晚期的欧洲浪漫主义文艺思潮      浪漫主义音乐的滥觞  </p>
-<p>第二讲：路德维希.凡.贝多芬音乐中的浪漫主义风格因素      贝多芬的音乐风格转变      贝多芬与浪漫主义文化思潮   </p>
-<p>第三讲：卡尔.玛丽亚.冯.韦伯与德国浪漫主义歌剧      歌剧《自由射手》的浪漫主义特征      歌剧《自由射手》与民族意识的觉醒  </p>
-<p>第四讲：“歌曲之王”弗朗兹.舒伯特      浪漫主义诗歌与艺术歌曲的发展      舒伯特艺术歌曲的人文特征      舒伯特的交响曲：古典与浪漫的矛盾  </p>
-<p>第五讲：用音乐书写日记的人：费利克斯.门德尔松      《无词歌》与门德尔松的情感世界      “标题音乐”的先锋：戏剧配乐《仲夏夜之梦》序曲      作为音乐活动家的门德尔松  </p>
-<p>第六讲：浪漫主义时代的喜剧之王：安东尼奥?罗西尼      “罗西尼旋风”的文化意义      歌剧《塞维利亚的理发师》中的戏剧—音乐处理      罗西尼的隐退和宿命情结   </p>
-<p>第七讲：赫克托. 柏辽兹和他的《幻想交响曲》      柏辽兹与“幻想”精神      《幻想交响曲》文字注解和音乐的对应关系      交响曲：从音响建筑到戏剧的缩影  </p>
-<p>第八讲：“钢琴诗人”弗里德里克. 肖邦      肖邦钢琴音乐中的浪漫意境      浪漫主义时代的古典捍卫者      爱情与乡愁引发的悲情  </p>
-<p>第九讲：弗朗兹. 李斯特和他的“交响诗”      李斯特的音乐美学观      诗歌与交响曲的融合      神话在浪漫主义音乐文化中的价值  </p>
-<p>第十讲：乐剧之父理查德. 瓦格纳      瓦格纳的“综合艺术”理想      《未来的艺术品》评价      瓦格纳的乐剧（music drama）创作实践  </p>
-<p>第十一讲：19世纪的轻音乐文化       施特劳斯家族的舞曲音乐       奥芬巴赫轻歌剧的风格情调       奥地利的世俗音乐环境 </p>
-<p> 第十二讲：浪漫主义民族乐派的兴起       音乐家民族意识的觉醒       俄罗斯“强力集团”的音乐创作特征       捷克、挪威和芬兰的民族乐派作曲家       浪漫主义风格与民间音乐的联姻  </p>
-<p>第十三讲：俄罗斯的浪漫主义音乐灵魂：彼得. 伊里奇. 柴可夫斯基       俄罗斯民间因素在柴可夫斯基音乐作品中的体现       幻想序曲《罗密欧与朱丽叶》传达的爱情观       《第六交响曲》终曲乐章的悲剧情结  </p>
-<p>第十四讲：古斯塔夫.马勒与德奥晚期的浪漫主义音乐文化       马勒交响曲的音乐特色       马勒对于爱情与死亡的观点       马勒对东方文化的探索 参考曲目：《大地之歌》（Das Lied Von der Erde）       《亡儿之歌》（Kindertotenlieder）       《第六交响曲》 《第十交响曲》（未完成）  </p>
-<p>第十五讲：浪漫主义音乐的终结与遗存       理查.施特劳斯的交响诗《死与净化》和《查拉图斯特拉如是说》       尼采的哲学观念对浪漫主义音乐产生的影响       拉赫玛尼诺夫：笃旅异乡的浪漫主义者  </p>
-<p>第十六讲：浪漫主义音乐对中国近现代音乐的影响       黄自歌曲作品中的浪漫主义特征       中国知识分子对浪漫主义音乐的认同       江文也《台湾舞曲》和《汨罗沉流》中的浪漫因素       浪漫主义：一个被重新认知的当代话题       （本讲可作为复习总结课）  </p>
-<p>授课方式：课堂教授和研讨相结合；       要求学生<strong>课下预先阅读指定文字资料，聆听参考曲目</strong>；       每堂课安排10分钟自由提问时间；       建立互联网课程信息平台，上传和分发各种文化信息和历史资料。  </p>
-<p>本课程采取现场闭卷笔试与期末论文相结合的成绩评定方法。现场闭卷考试以知识性考题和简答题为主，考察学生对一学期音乐知识和理论观点的掌握情况。期末论文在学期期中考试阶段布置具体题目，重点考察学生的独立研究观点和文字表述能力。现场闭卷笔试分数占总成绩的60%，期末论文占总成绩的40%。                                                                                </p>
+More info: Writing
+Run server1$ hexo server
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/13/first-blog/" data-id="ckzkqfvhb0000hxp1dsn50q00" data-title="first-blog" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%AA%E6%BC%AB%E4%B8%BB%E4%B9%89%E6%97%B6%E4%BB%A3%E7%9A%84%E6%AC%A7%E6%B4%B2%E9%9F%B3%E4%B9%90%E8%AF%BE%E7%A8%8B%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF/" rel="tag">浪漫主义时代的欧洲音乐课程详细信息</a></li></ul>
+More info: Server
+Generate static files1$ hexo generate
 
-    </footer>
-  </div>
-  
-</article>
+More info: Generating
+Deploy to remote sites1$ hexo deploy
 
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/02/13/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-02-13T03:29:27.212Z" itemprop="datePublished">2022-02-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/02/13/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/13/hello-world/" data-id="ckzkpodbh0000akp1c0qp3472" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%AA%E6%BC%AB%E4%B8%BB%E4%B9%89%E6%97%B6%E4%BB%A3%E7%9A%84%E6%AC%A7%E6%B4%B2%E9%9F%B3%E4%B9%90%E8%AF%BE%E7%A8%8B%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF/" rel="tag">浪漫主义时代的欧洲音乐课程详细信息</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/%E6%B5%AA%E6%BC%AB%E4%B8%BB%E4%B9%89%E6%97%B6%E4%BB%A3%E7%9A%84%E6%AC%A7%E6%B4%B2%E9%9F%B3%E4%B9%90%E8%AF%BE%E7%A8%8B%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF/" style="font-size: 10px;">浪漫主义时代的欧洲音乐课程详细信息</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/02/13/first-blog/">first-blog</a>
-          </li>
-        
-          <li>
-            <a href="/2022/02/13/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2022 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+More info: Deployment
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">1</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2022/02/13/first-blog/" title="first-blog">first-blog</a><time datetime="2022-02-13T03:49:20.000Z" title="Created 2022-02-13 11:49:20">2022-02-13</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2022/02/13/hello-world/" title="Hello World">Hello World</a><time datetime="2022-02-13T03:29:27.212Z" title="Created 2022-02-13 11:29:27">2022-02-13</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E6%B5%AA%E6%BC%AB%E4%B8%BB%E4%B9%89%E6%97%B6%E4%BB%A3%E7%9A%84%E6%AC%A7%E6%B4%B2%E9%9F%B3%E4%B9%90%E8%AF%BE%E7%A8%8B%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF/" style="font-size: 1.1em; color: #999">浪漫主义时代的欧洲音乐课程详细信息</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/02/"><span class="card-archive-list-date">February 2022</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-02-13T06:57:47.677Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
